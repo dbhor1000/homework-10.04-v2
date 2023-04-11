@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
 
+    //Маленький, прозрачный комментарий. Мечтайте!
+
 public static Stream<Arguments> provideParamsForTests() {
     return Stream.of(
             Arguments.of(UserTestConstants.DEFAULT_LOGIN, UserTestConstants.DEFAULT_EMAIL),
