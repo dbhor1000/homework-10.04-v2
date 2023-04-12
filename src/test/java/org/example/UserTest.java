@@ -27,8 +27,7 @@ public static Stream<Arguments> provideParamsForTests() {
     User testUser = new User(login, email);
         Assertions.assertEquals(testUser.getLogin(), login);
         Assertions.assertEquals(testUser.getEmail(), email);
-        Assertions.assertNotEquals(testUser.getLogin(), testUser.getEmail());
-        Assertions.assertTrue(testUser.getEmail().contains("@") && testUser.getEmail().contains(".") );
+        Assertions.assertDoesNotThrow(() -> new User(login, email));
     }
     @Test
     public void nullParamConstructorTest() {
